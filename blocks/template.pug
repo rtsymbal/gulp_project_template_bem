@@ -1,0 +1,51 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+
+include head/head
+include header/header
+include head-line/head-line
+include intro/intro
+include title/title
+
+doctype html
+html(lang="ru")
+
+	block head
+		head
+			+head({
+				"title": "Title",
+				"author": "Roman Tsymbal",
+				"description": "Template"
+				"path": "path/to/image.jpg"
+			})
+			
+		+b.BODY.page
+			+e.DIV.wrap
+				block header
+					header header
+
+					//- user code
+					
+				block content
+					section content
+
+					//- user code
+
+				block footer
+					footer footer
+
+					//- user code
+				
+				
+			block styles			
+				// build:css css/main.css
+				//- plugin styles
+				link(rel="stylesheet", href="css/main.css")
+				// endbuild
+
+			block scripts
+				// build:js js/main.js
+				script( src="libs/jquery/dist/jquery.min.js")
+				//- plugin scripts
+				script( src="js/main.js")
+				// endbuild
