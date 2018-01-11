@@ -1,0 +1,87 @@
+@import "_base/variables"
+
+// html, body, div, span, applet, object, iframe,
+// h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+// a, abbr, acronym, address, big, cite, code,
+// del, dfn, em, img, ins, kbd, q, s, samp,
+// small, strike, strong, sub, sup, tt, var,
+// b, u, i, center,
+// dl, dt, dd, ol, ul, li,
+// fieldset, form, label, legend,
+// table, caption, tbody, tfoot, thead, tr, th, td,
+// article, aside, canvas, details, embed,
+// figure, figcaption, footer, header, hgroup,
+// menu, nav, output, ruby, section, summary,
+// time, mark, audio, video
+//   margin: 0
+//   padding: 0
+//   border: 0
+//   vertical-align: baseline
+
+// /* HTML5 display-role reset for older browsers */
+// article, aside, details, figcaption, figure,
+// footer, header, hgroup, menu, nav, section
+//   display: block
+
+// ol, ul
+//   list-style: none
+
+// blockquote, q
+//   quotes: none
+
+// blockquote:before, blockquote:after,
+// q:before, q:after
+//   content: ''
+//   content: none
+
+// table
+//   border-collapse: collapse
+//   border-spacing: 0
+// a
+//   text-decoration: none
+
+//adds
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: $font-color-dark
+  opacity: 1
+
+*:-moz-placeholder
+  color: $font-color-dark
+  opacity: 1
+
+*::-moz-placeholder
+  color: $font-color-dark
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: $font-color-dark
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: $font-color-dark
+body input:required:valid,
+body textarea:required:valid
+  color: $font-color-dark
+
+html, body
+  height: 100%
+
+body
+  min-width: 320px
+  max-width: 1920px 
+  position: relative
+  font-family: $main-font
+  color: $font-color-dark
+  overflow-x: hidden
+  opacity: 1

@@ -9,7 +9,7 @@ mixin head(data)
 	meta(name="HandheldFriendly" content="true")
 	meta(name="format-detection", content="telephone=no")
 	meta(content="IE=edge" http-equiv="X-UA-Compatible")
-	meta(property="og:image" content=data.path name="path")
+	//- meta(property="og:image" content=data.path name="path")
 
 	link(rel="shortcut icon", href="img/favicon/favicon.png", type="image/x-icon")
 	link(rel="apple-touch-icon", href="img/favicon/apple-touch-icon.png")
@@ -25,5 +25,5 @@ mixin head(data)
 	<!-- iOS Safari -->
 	meta(name="apple-mobile-web-app-status-bar-style" content="#000")
 	style.
-		body { opacity: 0; overflow-x: hidden; } 
-		html { background-color: #fff; }
+			body { opacity: 0; overflow-x: hidden; } 
+			html { background-color: #fff; }

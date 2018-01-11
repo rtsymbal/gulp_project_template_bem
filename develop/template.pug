@@ -3,9 +3,6 @@ include _assets/bemto/bemto
 
 include head/head
 include header/header
-include head-line/head-line
-include intro/intro
-include title/title
 
 doctype html
 html(lang="ru")
@@ -15,34 +12,35 @@ html(lang="ru")
 			+head({
 				"title": "Title",
 				"author": "Roman Tsymbal",
-				"description": "Template"
-				"path": "path/to/image.jpg"
+				"description": "Template",
 			})
-			
-		+b.BODY.page
-			+e.DIV.wrap
-				block header
-					header header
 
-					//- user code
+		+b.BODY.page
+			+e.wrap
+
+				block header
+					+header()
+					
+					//- imported blocks
 					
 				block content
 					section content
-
-					//- user code
-
+					
+					//- imported blocks
+					
 				block footer
 					footer footer
-
-					//- user code
-				
-				
+					
+					//- imported blocks
+					
+					
 			block styles			
 				// build:css css/main.css
-				//- plugin styles
+				link(rel="stylesheet", href="libs/font-awesome/css/font-awesome.min.css")
+					//- plugin styles
 				link(rel="stylesheet", href="css/main.css")
 				// endbuild
-
+				
 			block scripts
 				// build:js js/main.js
 				script( src="libs/jquery/dist/jquery.min.js")

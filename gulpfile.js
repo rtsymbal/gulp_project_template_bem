@@ -15,11 +15,12 @@ var useref = require('gulp-useref'),
 		uglify = require('gulp-uglify'),
 		rimraf = require('rimraf'),
 		notify = require('gulp-notify'),
+		cache  = require('gulp-cache'),
 		ftp = require('vinyl-ftp');
 
 var paths = {
-			blocks: 'blocks/',
-			devDir: 'app/',
+			blocks: 'develop/',
+			devDir: 'source/',
 			outputDir: 'build/'
 		};
 
@@ -134,6 +135,8 @@ gulp.task('send', function() {
 
 });
 
+//cash clean
+gulp.task('clearcache', function () { return cache.clearAll(); });
 
 //default
 gulp.task('default', ['browser-sync', 'watch', 'pug', 'sass', 'scripts']);
