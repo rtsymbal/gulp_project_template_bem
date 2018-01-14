@@ -1,5 +1,5 @@
 include _assets/bemto/bemto
-- set_bemto_settings({ modifier: "--" })
+- set_bemto_settings({ prefix: "rt-", modifier: "--" })
 
 include head/head
 include header/header
@@ -13,6 +13,7 @@ html(lang="ru")
 				"title": "Title",
 				"author": "Roman Tsymbal",
 				"description": "Template",
+				"path": "img/keepcalm.png"
 			})
 
 		+b.BODY.page
@@ -36,14 +37,14 @@ html(lang="ru")
 					
 			block styles			
 				// build:css css/main.css
-				link(rel="stylesheet", href="libs/font-awesome/css/font-awesome.min.css")
+				link(rel="stylesheet", href="libs/font-awesome/font-awesome.min.css")
 					//- plugin styles
 				link(rel="stylesheet", href="css/main.css")
 				// endbuild
-				
+
 			block scripts
 				// build:js js/main.js
-				script( src="libs/jquery/dist/jquery.min.js")
-				//- plugin scripts
+				script( src="libs/jquery/jquery.min.js")
+					//- plugin scripts
 				script( src="js/main.js")
 				// endbuild
