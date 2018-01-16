@@ -19,8 +19,8 @@ var useref = require('gulp-useref'),
 		ftp = require('vinyl-ftp');
 
 var paths = {
-			blocks: 'develop/',
-			devDir: 'source/',
+			blocks: 'dev/',
+			devDir: 'src/',
 			outputDir: 'build/'
 		};
 
