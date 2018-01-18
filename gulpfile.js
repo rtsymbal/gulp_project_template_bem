@@ -16,11 +16,11 @@ var useref = require('gulp-useref'),
 		rimraf = require('rimraf'),
 		notify = require('gulp-notify'),
 		cache  = require('gulp-cache'),
-		ftp = require('vinyl-ftp');
+		ftp 	 = require('vinyl-ftp');
 
 var paths = {
-			blocks: 'dev/',
-			devDir: 'src/',
+			blocks: 'develop/',
+			devDir: 'source/',
 			outputDir: 'build/'
 		};
 
@@ -56,7 +56,7 @@ gulp.task('sass', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 			paths.blocks + '**/*.js',
-			'!' + paths.blocks + '_assets/**/*.js'
+			'!' + paths.blocks + '_assets/**/**/*.js'
 		])
 		.pipe(concat('main.js'))
 		.pipe(gulp.dest(paths.devDir + 'js/'))
@@ -67,7 +67,7 @@ gulp.task('scripts', function() {
 gulp.task('watch', function() {
 	gulp.watch(paths.blocks + '**/*.pug', ['pug']);
 	gulp.watch(paths.blocks + '**/*.sass', ['sass']);
-	gulp.watch(paths.blocks + '**/*.js', ['scripts']);
+	gulp.watch(paths.blocks + '**/**/*.js', ['scripts']);
 });
 
 //server
