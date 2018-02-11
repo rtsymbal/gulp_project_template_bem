@@ -92,7 +92,7 @@ gulp.task('clean', function(cb) {
 
 //css + js
 gulp.task('build', ['clean'], function () {
-	return gulp.src(paths.devDir + '*.html')
+	return gulp.src(paths.devDir + '*.html', 'ht.access')
 		.pipe( useref() )
 		.pipe( gulpif('*.js', uglify()) )
 		.pipe( gulpif('*.css', cssmin()) )
